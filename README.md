@@ -1,3 +1,3 @@
-# Build Benchmark
+# Posthog Benchmark
 
-Periodic benchmark of Docker build of our favorite open-source projects.
+An hourly benchmark that builds Posthog with Docker vs using a Namespace Remote Builder.

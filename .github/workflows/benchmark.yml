@@ -1,4 +1,4 @@
-name: Novu Benchmark
+name: PostHog Benchmark
 on:
   push:
   workflow_dispatch:
@@ -14,14 +14,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - run: git submodule update --init targets/novu
+      - run: git submodule update --init posthog
 
       - uses: docker/setup-buildx-action@v2
 
       - uses: docker/build-push-action@v4
         with:
-          context: ./targets/novu
-          file: ./targets/novu/apps/web/Dockerfile
+          context: ./posthog
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
   nsc-build:
     name: Build with Namespace
@@ -29,7 +30,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - run: git submodule update --init targets/novu
+      - run: git submodule update --init posthog
 
       - uses: namespacelabs/nscloud-setup@v0
 
@@ -37,5 +38,4 @@ jobs:
 
       - uses: docker/build-push-action@v4
         with:
-          context: ./targets/novu
-          file: ./targets/novu/apps/web/Dockerfile
+          context: ./posthog

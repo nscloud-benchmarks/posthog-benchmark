@@ -1,9 +1,4 @@
-[submodule "targets/novu"]
-	path = targets/novu
-	url = https://github.com/novuhq/novu.git
-[submodule "targets/posthog"]
-	path = targets/posthog
+[submodule "posthog"]
+	path = posthog
 	url = https://github.com/PostHog/posthog.git
-[submodule "targets/localstack"]
-	path = targets/localstack
-	url = https://github.com/localstack/localstack.git
+

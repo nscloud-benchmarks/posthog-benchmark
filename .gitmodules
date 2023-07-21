@@ -1,4 +1,0 @@
-[submodule "posthog"]
-	path = posthog
-	url = https://github.com/PostHog/posthog.git
-

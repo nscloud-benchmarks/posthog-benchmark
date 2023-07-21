@@ -1,3 +1,3 @@
 # Posthog Benchmark
 
-An hourly benchmark that builds Posthog with Docker vs using a Namespace Remote Builder.
+This benchmark was moved to [posthog-benchmark/build](https://github.com/posthog-benchmark/build).
